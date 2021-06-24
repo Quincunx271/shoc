@@ -13,6 +13,8 @@
 #include <CL/opencl.h>
 #endif
 
+#include "clcompile.hpp"
+
 // ****************************************************************************
 // File:  support.h
 //
@@ -478,4 +480,3 @@ checkExtension( cl_device_id devID, const std::string& ext )
 
 
 #endif
-

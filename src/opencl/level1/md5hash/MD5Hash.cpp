@@ -577,7 +577,7 @@ RunBenchmark(cl_device_id dev,
     if (verbose)
         cout << "Compiling md5 kernel." << endl;
 
-    err = clBuildProgram(prog, 1, &dev, NULL, NULL, NULL);
+    err = ctmetric::clBuildProgram(prog, 1, &dev, NULL, NULL, NULL);
 
     if (err != 0)
     {
@@ -735,4 +735,3 @@ RunBenchmark(cl_device_id dev,
 
     return;
 }
-

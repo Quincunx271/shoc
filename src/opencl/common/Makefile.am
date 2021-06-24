@@ -6,4 +6,3 @@ libSHOCCommonOpenCL_a_SOURCES = OpenCLDeviceInfo.cpp \
 	OpenCLPlatform.cpp \
 	OpenCLNodePlatformContainer.cpp \
 	Event.cpp
-

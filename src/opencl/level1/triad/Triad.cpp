@@ -201,7 +201,7 @@ RunBenchmark(cl_device_id devid,
     CL_CHECK_ERROR (err);
 
     // Compile the program
-    err = clBuildProgram (prog, 0, NULL, NULL, NULL, NULL);
+    err = ctmetric::clBuildProgram (prog, 0, NULL, NULL, NULL, NULL);
     CL_CHECK_ERROR (err);
 
     // check if we have to dump the PTX

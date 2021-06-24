@@ -174,7 +174,7 @@ void runTest(const string& testName, cl_device_id dev, cl_context ctx,
 
     cout << "Compiling reduction kernel." << endl;
 
-    err = clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
+    err = ctmetric::clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
     CL_CHECK_ERROR(err);
 
     if (err != 0)

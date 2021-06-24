@@ -185,7 +185,7 @@ void ellPackTest(cl_device_id dev, cl_context ctx, string compileFlags,
     CL_CHECK_ERROR(err);
 
     // Build the openCL kernels
-    err = clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
+    err = ctmetric::clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
     CL_CHECK_ERROR(err);
 
     // If there is a build error, print the output and return
@@ -439,7 +439,7 @@ void csrTest(cl_device_id dev, cl_context ctx, string compileFlags,
     CL_CHECK_ERROR(err);
 
     // Build the openCL kernels
-    err = clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
+    err = ctmetric::clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
     // CL_CHECK_ERROR(err);  // if we check and fail here, we never get to see
                             // the OpenCL compiler's build log
 

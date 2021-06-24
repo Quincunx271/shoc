@@ -150,7 +150,7 @@ void runTest(const string& testName, cl_device_id dev, cl_context ctx,
     {
         cout << "Compiling scan kernels." << endl;
     }
-    err = clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
+    err = ctmetric::clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
     CL_CHECK_ERROR(err);
 
     if (err != CL_SUCCESS)
@@ -448,5 +448,3 @@ void runTest(const string& testName, cl_device_id dev, cl_context ctx,
     err = clReleaseKernel(bottom_scan);
     CL_CHECK_ERROR(err);
 }
-
-

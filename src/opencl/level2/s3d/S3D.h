@@ -30,7 +30,7 @@
     CL_CHECK_ERROR(err); }
 
 #define clBuild(progname)                                                      \
-    err = clBuildProgram(progname, 0, NULL,                                    \
+    err = ctmetric::clBuildProgram(progname, 0, NULL,                                    \
             compileFlags.c_str(), NULL, NULL);                                 \
     CL_CHECK_ERROR(err);                                                       \
     if (err != 0) {                                                            \

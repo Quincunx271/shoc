@@ -179,7 +179,7 @@ void RunTest1(cl_device_id device, cl_context context, cl_command_queue queue,
 
     //compile the kernel code
     const char *c_flags="";
-    err_code=clBuildProgram(program,1,&device,c_flags,NULL,NULL);
+    err_code=ctmetric::clBuildProgram(program,1,&device,c_flags,NULL,NULL);
 
     //if error dump the compile error
     if (err_code!=CL_SUCCESS)
@@ -573,7 +573,7 @@ void RunTest2(
 
     //compile the kernel code
     const char *compiler_flags="-g -O0";
-    err_code=clBuildProgram(program,1,&device,NULL,NULL,NULL);
+    err_code=ctmetric::clBuildProgram(program,1,&device,NULL,NULL,NULL);
 
     //if error dump the compile error
     if (err_code!=CL_SUCCESS)

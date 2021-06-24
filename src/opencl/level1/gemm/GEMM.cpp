@@ -188,7 +188,7 @@ void runTest(const string& testName, cl_device_id dev, cl_context ctx,
     CL_CHECK_ERROR(err);
 
     string flags = compileFlags + " -cl-mad-enable";
-    err = clBuildProgram(prog, 0, NULL, flags.c_str(), NULL,
+    err = ctmetric::clBuildProgram(prog, 0, NULL, flags.c_str(), NULL,
             NULL);
     CL_CHECK_ERROR(err);
 

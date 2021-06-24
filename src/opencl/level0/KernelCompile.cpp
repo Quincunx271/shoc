@@ -177,7 +177,7 @@ void RunBenchmark(cl_device_id id,
 
         int TH_short_build = Timer::Start();
         // Compile the program
-        err = clBuildProgram (short_prog, 0, NULL, NULL, NULL, NULL);
+        err = ctmetric::clBuildProgram (short_prog, 0, NULL, NULL, NULL, NULL);
         double len_short_build = Timer::Stop(TH_short_build, "TH_short_build");
         CL_CHECK_ERROR(err);
 
@@ -209,7 +209,7 @@ void RunBenchmark(cl_device_id id,
 
         // Compile the program
         int TH_long_build = Timer::Start();
-        err = clBuildProgram (long_prog, 0, NULL, NULL, NULL, NULL);
+        err = ctmetric::clBuildProgram (long_prog, 0, NULL, NULL, NULL, NULL);
         double len_long_build = Timer::Stop(TH_long_build, "TH_long_build");
         CL_CHECK_ERROR(err);
 

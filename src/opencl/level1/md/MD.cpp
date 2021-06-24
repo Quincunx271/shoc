@@ -325,7 +325,7 @@ void runTest(const string& testName, cl_device_id dev, cl_context ctx,
             &err);
     CL_CHECK_ERROR(err);
 
-    err = clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
+    err = ctmetric::clBuildProgram(prog, 1, &dev, compileFlags.c_str(), NULL, NULL);
     CL_CHECK_ERROR(err);
 
     // If there is a build error, print the output and return

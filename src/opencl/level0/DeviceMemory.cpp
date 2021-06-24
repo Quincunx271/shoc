@@ -392,7 +392,7 @@ void RunBenchmark(cl_device_id dev,
                 CL_CHECK_ERROR(err);
 
                 // Compile the program
-                err = clBuildProgram(prog, 0, NULL, NULL, NULL, NULL);
+                err = ctmetric::clBuildProgram(prog, 0, NULL, NULL, NULL, NULL);
                 CL_CHECK_ERROR(err);
 
                 // Extract out memory kernels
@@ -539,7 +539,7 @@ void RunBenchmark(cl_device_id dev,
                 CL_CHECK_ERROR(err);
 
                 // Compile the program
-                err = clBuildProgram(prog, 0, NULL, NULL, NULL, NULL);
+                err = ctmetric::clBuildProgram(prog, 0, NULL, NULL, NULL, NULL);
                 CL_CHECK_ERROR(err);
 
                 // check if we have to dump the PTX
@@ -857,7 +857,7 @@ void TestImageMemory(cl_context ctx,
     CL_CHECK_ERROR(err);
 
     // Compile the program
-    err = clBuildProgram(prog, 0, NULL, NULL, NULL, NULL);
+    err = ctmetric::clBuildProgram(prog, 0, NULL, NULL, NULL, NULL);
     CL_CHECK_ERROR(err);
 
     // Extract out kernels

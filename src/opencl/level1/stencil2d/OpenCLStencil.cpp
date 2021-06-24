@@ -75,7 +75,7 @@ OpenCLStencil<T>::OpenCLStencil( T wCenter,
 
     try
     {
-        clErr = clBuildProgram( prog,
+        clErr = ctmetric::clBuildProgram( prog,
                                 1,
                                 &device,
                                 buildOptions.str().c_str(),
@@ -487,4 +487,3 @@ OpenCLStencil<T>::DoPreIterationWork( cl_mem buf,
 {
     // in single process version, nothing for us to do
 }
-

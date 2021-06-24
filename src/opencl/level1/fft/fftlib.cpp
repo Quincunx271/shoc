@@ -49,7 +49,7 @@ init(OptionParser& op,
         args += " -DAMD_DOUBLE_PRECISION";
     }
 
-    err = clBuildProgram(fftProg, 0, NULL, args.c_str(), NULL, NULL);
+    err = ctmetric::clBuildProgram(fftProg, 0, NULL, args.c_str(), NULL, NULL);
     if( err == CL_BUILD_PROGRAM_FAILURE )
     {
         char* log = NULL;
@@ -212,4 +212,3 @@ void copyFromDevice(void* to_host, void* from_device,
                                      0, bytes, to_host, 0, NULL, NULL);
     CL_CHECK_ERROR(err);
 }
-

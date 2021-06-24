@@ -187,7 +187,7 @@ void RunBenchmark(cl_device_id id,
        CL_CHECK_ERROR(err);
 
        // Compile the kernel
-       err = clBuildProgram(prog, 0, NULL, opts, NULL, NULL);
+       err = ctmetric::clBuildProgram(prog, 0, NULL, opts, NULL, NULL);
        // Compile the kernel
        CL_CHECK_ERROR(err);
 
@@ -393,7 +393,7 @@ RunTest(cl_device_id id,
        CL_CHECK_ERROR(err);
 
        // Compile the program
-       err = clBuildProgram(prog, 1, &id, opts, NULL, NULL);
+       err = ctmetric::clBuildProgram(prog, 1, &id, opts, NULL, NULL);
        CL_CHECK_ERROR(err);
 
        if (err != 0)
@@ -563,7 +563,7 @@ RunTest(cl_device_id id,
         CL_CHECK_ERROR(err);
 
         // Compile kernel
-        err = clBuildProgram(prog, 1, &id, opts, NULL, NULL);
+        err = ctmetric::clBuildProgram(prog, 1, &id, opts, NULL, NULL);
         CL_CHECK_ERROR(err);
 
         // Extract out kernel
@@ -882,4 +882,3 @@ generateUKernel(int useMADDMUL, bool doublePrecision, int nRepeats, int nUnrolls
 
     return kSource;
 }
-
